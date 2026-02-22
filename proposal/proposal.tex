@@ -90,7 +90,7 @@ pruned tokens are passed to LLaVA for final inference.
 
 %% --- I/O ---
 \node[iobox]                      (img)   {Image\\{\tiny(RGB)}};
-\node[iobox, below=1.20cm of img] (txt)   {Text Prompt};
+\node[iobox, below=0.90cm of img] (txt)   {Text Prompt};
 
 %% --- Stage 1 ---
 \node[box=cblue, right=of img]   (vit)   {ViT\\Tokenizer};
@@ -99,7 +99,7 @@ pruned tokens are passed to LLaVA for final inference.
 \node[box=cblue, right=of clip]  (temb)  {Text Emb.\ $T$};
 
 %% --- Stage 2 ---
-\node[box=cred,  right=1.0cm of vtok, yshift=-0.60cm] (score) {Cosine\\Scoring};
+\node[box=cred,  right=1.0cm of vtok, yshift=-0.45cm] (score) {Cosine\\Scoring};
 \node[box=cred,  right=0.50cm of score]                (topk)  {Top-$k$ +\\Spatial Anchor};
 
 %% --- Stage 3 ---
